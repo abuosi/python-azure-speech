@@ -138,6 +138,11 @@ env.source
 # Rope project settings
 .ropeproject
 
+# Personal Directory
+transcripts/
+transcripts_new/
+audios/
+
 # mkdocs documentation
 /site
 
