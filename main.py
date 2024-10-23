@@ -1,5 +1,6 @@
 import os
 from audio_recognize import audio_recognize
+from resume_transcription import resume_transcription
 
 def process_audio_files(audios_folder, transcripts_folder):
     # Get the list of filenames in the audios folder
@@ -14,11 +15,16 @@ def process_audio_files(audios_folder, transcripts_folder):
         print('\nProcessing the file -> ' + filename)
 
         # Transcribe the audio file
-        result = audio_recognize(filename)
+        transcription = audio_recognize(filename)
+
+        # Resume the transcription
+        resume = resume_transcription(transcription)
+
+        result = f"Transcription:\n\n{transcription}\n\n\nResume:\n{resume}"
 
         # Write the transcript file
         output_filename = os.path.join(transcripts_folder, os.path.splitext(os.path.basename(filename))[0] + '.out')
-        with open(output_filename, 'w') as f:
+        with open(output_filename, 'w+') as f:
             f.write(result)
 
         print('\n\tTranscript file created -> ' + output_filename)
@@ -26,7 +32,7 @@ def process_audio_files(audios_folder, transcripts_folder):
 try:
     # Path to the audios folder
     audios_folder = './audios'
-    transcripts_folder = './transcripts'
+    transcripts_folder = './transcripts_new'
 
     process_audio_files(audios_folder, transcripts_folder)
 
