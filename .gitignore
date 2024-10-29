@@ -141,7 +141,14 @@ env.source
 # Personal Directory
 transcripts/
 transcripts_new/
+transcripts_licacoes/
 audios/
+audios_new/
+Ligacoes/
+
+# Sonarqube files
+.sonarqube/
+.scannerwork/
 
 # mkdocs documentation
 /site

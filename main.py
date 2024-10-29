@@ -31,8 +31,8 @@ def process_audio_files(audios_folder, transcripts_folder):
 
 try:
     # Path to the audios folder
-    audios_folder = './audios'
-    transcripts_folder = './transcripts_new'
+    audios_folder = './Ligacoes'
+    transcripts_folder = './transcripts_licacoes'
 
     process_audio_files(audios_folder, transcripts_folder)
 
